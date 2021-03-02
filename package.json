@@ -1,0 +1,15 @@
+{
+  "name": "cryptography",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "^8.3.0"
+  },
+  "scripts": {
+    "test": "mocha ./assigment_01/test/*.js --recursive --reporter=nyan"
+  },
+  "author": "tdxa",
+  "license": "ISC"
+}
