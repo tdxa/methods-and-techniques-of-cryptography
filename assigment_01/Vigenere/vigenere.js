@@ -49,7 +49,6 @@ function intToChar(numbers) {
     for (var i = 0; i < numbers.length; i++) {
         charArray.push(String.fromCharCode(numbers[i]));
     }
-    console.log(typeof (numbers[0]))
     return charArray;
 }
 
@@ -58,11 +57,8 @@ function intToChar(numbers) {
  * Returns the Vigenere cipher table in the ASCII range from 32 to 126
  * @returns {number[]} Matrix with Vigenere cipher table
  */
-function vigenereTable() {
+function vigenereTable(min=32, max=127) {
     let vigenereTable = new Array();
-
-    const min = 32;
-    const max = 127;
 
     for (let i = 0; i + min < max; i++) {
         let row = new Array();
@@ -91,3 +87,9 @@ function printTable() {
         document.getElementById("ascii").innerHTML = document.getElementById("ascii").innerHTML + "<tr><td>" + intToChar(table[i]).join("</td><td>") + "</td></tr>";
     }
 }
+
+module.exports = {
+    intToChar: intToChar,
+    vigenereTable: vigenereTable,
+    vigenereCipher: vigenereCipher
+};
