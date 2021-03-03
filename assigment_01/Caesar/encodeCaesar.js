@@ -16,8 +16,4 @@ const encodeCaesarCipher = (text, shift) => {
     }
 }
 
-
-console.log(encodeCaesarCipher("~", 1))
-
-
 module.exports = encodeCaesarCipher;
