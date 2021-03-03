@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Vigenere Cipher</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://bootswatch.com/4/sketchy/bootstrap.min.css">
+    <script src="vigenere.js"></script>
+</head>
+
+<body>
+    <div class="container mt-4">
+        <div class="jumbotron">
+            <h1 class="display-3">Vigenere Cipher</h1>
+            <p class="lead">This is a simple application that creates the Vigenere cipher.</p>
+            <hr class="my-4">
+            <p>The alphabet is an ASCII character range from 32 to 126 - so it contains a space, uppercase and lowercase letters.  </p>
+            <p>The "Print table" button displays the Vigener cipher table for the alphabet.</p>
+            <div class="row">
+                <div class="d-flex p-4 flex-column w-50">
+                    <div class="form-group">
+                        <label for="encryption-key">Enter the encryption key:</label>
+                        <input style="overflow:auto;resize:none" class="form-control" id="encryption-key"
+                            name="encryption-key" rows="3"></input>
+                    </div>
+                    <div class="form-group">
+                        <label for="text">Enter the text:</label>
+                        <input style="overflow:auto;resize:none" class="form-control" id="text" name="text"
+                            rows="3"></input>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex justify-content-start">
+                <input type="submit" value="Encrypt!" class="btn btn-primary btn-lg mr-3 ml-3" onclick="vigenereCipher(
+                    document.getElementById('text'),
+                    document.getElementById('encryption-key'),
+                    document.getElementById('cipher'))"></input>
+                <input type="submit" value="Print table!" class="btn btn-primary btn-lg ml-3"
+                    onclick="printTable()"></input>
+            </div>
+            <hr class="my-4">
+            <div>
+                <h2>Result</h2>
+                <p class="lead justify-content-center ml-1" id="cipher"></p>
+            </div>
+            <hr class="my-4">
+            <div style="overflow:auto;">
+                <table border="solid black" id="ascii"></table>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="d-flex justify-content-center mb-2">
+            <p class="text-muted">Created by tdxa</p>
+        </div>
+    </footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
