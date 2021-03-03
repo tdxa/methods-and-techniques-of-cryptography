@@ -1,6 +1,6 @@
 const assert = require('assert');
 const encodeCaesarCipher = require('../Caesar/encodeCaesar');
-const decodeCaesarCipher = require('../Caesar/decodeCaesar')
+const decodeCaesarCipher = require('../Caesar/manualCaesar')
 
 describe('Correct text encryption with Caesar', () => {
     it('Should return myyux?44lnymzg3htr4yi}f with input', () => {
