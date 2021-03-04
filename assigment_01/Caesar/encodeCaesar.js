@@ -1,13 +1,16 @@
+/**
+ * A function encrypting the Caesar cipher
+ *
+ * @param {string} text The text to be encrypted
+ * @param {number} shift Shift in the alphabet
+ * @returns Encrypted text
+ */
+
 const encodeCaesarCipher = (text, shift) => {
     if (text.length > 0) {
         let encodedText = '';
         for (let letter of text) {
-            //console.log(letter.charCodeAt(0))
-            // if (letter === ' ') {
-            //     encodedText += ' ';
-            // } else {
-            //     encodedText += String.fromCharCode((letter.charCodeAt(0) - 32 + shift) % 94 + 32);
-            // }
+            // ASCII range from 32 to 126
             encodedText += String.fromCharCode((letter.charCodeAt(0) - 32 + shift) % 94 + 32 );
         }
         return encodedText;
