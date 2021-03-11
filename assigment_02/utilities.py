@@ -50,7 +50,6 @@ def allhash(text):
             continue
         result.append(algorithm.hexdigest())
 
-    print(type(result))
     return result
 
 
@@ -117,14 +116,13 @@ def generatemessages():
     for i in range(16):
         text = ''.join(random.choices(string.ascii_letters + string.digits, k=10 + (i * 100)))
         messages.append(text)
-        print(10 + (i * 100))
 
     return messages
 
 
 """drawplot()
 
-    Generates a hash time graph with all algorithms from the hashlib library 
+    Generates a hash time plot with all algorithms from the hashlib library 
     for a list of strings of different lengths
     
     Inside, the generatemessages () function is called to create  list with random strings
@@ -138,8 +136,7 @@ def drawplot():
     for message in messages:
         results.append(timeit.Timer(lambda: allhash(message)).timeit(1))
 
-    plt.plot(results)
-    plt.xticks(np.arange(10, 1511, 100))
+    plt.plot(np.arange(10, 1511, 100),results)
     plt.title('Time hashing with all algorithms from hashlib')
     plt.ylabel('Hashing time')
     plt.xlabel('String length')
