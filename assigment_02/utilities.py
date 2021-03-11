@@ -35,7 +35,7 @@ hash_algorithms = [blake2b, blake2s, md5, sha1, sha224, sha256, sha384, sha3224,
             The string to hashed
 
     Returns
-    ----------
+    ---------
         result: list
             a list of generated hashes
 """
@@ -80,7 +80,7 @@ def printall(hashes):
             Path to the file to be hashed
 
     Returns
-    ----------
+    ---------
         str
             String containing the hash of the file
 """
