@@ -1,9 +1,9 @@
 # Assigment 02: Hash functions
 
-- [x] Implement hashing with all the functions returned by `algorithms_available ` from the `hashlib` library along with returning information about hash time  for the input data.
+- [x] Implement hashing with all the functions returned by `algorithms_available ` from the `hashlib` library with returning information about hash time  for the input data.
   
 
-- [ ] Download a larg file (e.g. Ubuntu) and check if the hash is correct.
+- [ ] Download a large file (e.g. Ubuntu) and check if the hash is correct.
 
 
 - [ ] Implement a function that hashes any binary file from disk. Check it out by hashing the Ubuntu image from point 2.
